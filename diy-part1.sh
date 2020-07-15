@@ -8,8 +8,9 @@
 # Blog: https://p3terx.com
 #=============================================================
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
-# Add a feed source
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+git clone https://github.com/bin20088/luci-theme-butongwifi.git package/luci-theme-butongwifi
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
+chmod 0755 package/luci-app-koolddns/root/etc/init.d/koolddns
+chmod 0755 package/luci-app-koolddns/root/usr/share/koolddns/aliddns
+./scripts/feeds update -a
+./scripts/feeds install -a
