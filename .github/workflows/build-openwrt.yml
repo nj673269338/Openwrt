@@ -18,7 +18,7 @@ on:
     paths:
       - '.config'
 #  schedule:
-#    - cron: 0 8 * * 5
+#    - cron: 30 20 * * *
 #  watch:
 #    types: started
 
@@ -29,12 +29,13 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: ture
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
+  UPLOAD_COWTRANSFER: ture
   UPLOAD_WETRANSFER: false
   TZ: Asia/Shanghai
+  FILE_NAME: sakura
 
 jobs:
   build:
