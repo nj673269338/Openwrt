@@ -10,3 +10,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+git clone https://github.com/bin20088/luci-theme-butongwifi.git package/luci-theme-butongwifi
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
+chmod 0755 package/luci-app-koolddns/root/etc/init.d/koolddns
+chmod 0755 package/luci-app-koolddns/root/usr/share/koolddns/aliddns
+./scripts/feeds update -a
+./scripts/feeds install -a
